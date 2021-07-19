@@ -29,23 +29,25 @@ console.log(lastElementInArray(["Haas", "Cavia", "Kip", "Schildpad"]));
 
 ////// opdracht E
 const presidents = ["Trump", "Obama", "Bush", "Clinton"]
-// const impeachTrumpSlice = function (array) {
-//     array.splice(0, 1);
-//     return array;
-// };
+// slice = NOT mutating by copying array-elements.
+const impeachTrumpSlice = function (array) {
+    let newArray = array.slice(1, 4);
+    return newArray;
+};
+// .splice = mutation by removing array-element(s).
 const impeachTrumpSplice = function (array) {
     array.splice(0, 1);
     return array;
 };
-// console.log(impeachTrumpSlice(presidents)); // ["Obama", "Bush", "Clinton"]
+console.log(impeachTrumpSlice(presidents)); // ["Obama", "Bush", "Clinton"]
 console.log(impeachTrumpSplice(presidents)); // ["Obama", "Bush", "Clinton"]
 
 ////// opdracht F
 const stringsTogether = function (array) {
-    return (array.join(' '));
+    return array.join(' ');
 };
 console.log(stringsTogether(['Winc', 'Academy', 'is', 'leuk', ';-}']))
-//resultaat: "Winc Academy is leuk ;-}"
+//resultaat: Winc Academy is leuk ;-}
 
 ////// opdracht G
 const combineArrays = function (array1, array2) {

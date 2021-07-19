@@ -13,8 +13,7 @@ for (let person of array) {
     // console.log("This is:", person.name);
     // console.log('year of birth:', 2021 - person.age);
     // console.log(person.name, 'is a', person.profession);
-       if (person.age > 50)
-    return true;
-    console.log(person.age);
-
+    if (person.age > 50) {
+        console.log('person is older than 50', person.name);
+    };
 };
